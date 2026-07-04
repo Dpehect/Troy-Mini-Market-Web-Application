@@ -1,0 +1,5 @@
+"use client";
+import { AlertTriangle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Container } from "@/components/shared/container";
+export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) { return <section className="py-16 md:py-24"><Container><div className="mx-auto max-w-2xl rounded-[2rem] border border-border bg-card p-8 text-center shadow-card"><div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-danger/10 text-danger"><AlertTriangle className="h-7 w-7" /></div><h1 className="font-display text-4xl font-semibold tracking-tight">Something went wrong.</h1><p className="mt-3 text-sm leading-6 text-muted-foreground">The shopping experience hit an unexpected issue. You can retry without losing the app shell.</p>{error.digest ? <p className="mt-3 text-xs text-muted-foreground">Error digest: {error.digest}</p> : null}<Button className="mt-6" onClick={reset}>Try again</Button></div></Container></section>; }

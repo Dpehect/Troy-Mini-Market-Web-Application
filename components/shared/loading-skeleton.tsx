@@ -1,0 +1,4 @@
+import { cn } from "@/lib/utils";
+export function LoadingSkeleton({ className }: { className?: string }) { return <div className={cn("animate-pulse rounded-2xl bg-muted", className)} />; }
+export function ProductCardSkeleton() { return <div className="rounded-3xl border border-border bg-card p-4 shadow-soft" aria-hidden="true"><LoadingSkeleton className="aspect-square w-full" /><LoadingSkeleton className="mt-4 h-4 w-3/4" /><LoadingSkeleton className="mt-2 h-3 w-1/2" /><LoadingSkeleton className="mt-3 h-6 w-32" /><LoadingSkeleton className="mt-5 h-10 w-full rounded-full" /></div>; }
+export function PageSkeleton() { return <div className="space-y-6" aria-hidden="true"><LoadingSkeleton className="h-12 w-80" /><LoadingSkeleton className="h-5 w-full max-w-2xl" /><div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{Array.from({ length: 8 }).map((_, index) => <ProductCardSkeleton key={index} />)}</div></div>; }

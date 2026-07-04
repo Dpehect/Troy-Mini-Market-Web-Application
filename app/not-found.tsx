@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Container } from "@/components/shared/container";
+export default function NotFound() { return <section className="py-16 md:py-24"><Container><div className="mx-auto max-w-2xl rounded-[2rem] border border-border bg-card p-8 text-center shadow-card"><p className="text-sm font-black uppercase tracking-[0.24em] text-accent">404</p><h1 className="mt-3 font-display text-5xl font-semibold tracking-tight">This aisle is empty.</h1><p className="mt-4 text-base leading-7 text-muted-foreground">The page you’re looking for does not exist, but the market is still open.</p><div className="mt-7 flex justify-center gap-3"><Button asChild><Link href="/shop">Shop groceries</Link></Button><Button asChild variant="secondary"><Link href="/">Back home</Link></Button></div></div></Container></section>; }

@@ -1,0 +1,49 @@
+{
+  "name": "troy-mini-market-professional-market",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Professional ultra-minimal local grocery ecommerce experience built with Next.js, TypeScript and user-first UX.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "qa": "npm run typecheck && next build",
+    "check": "npm run typecheck && next build --experimental-build-mode compile"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.9",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.13",
+    "lucide-react": "^0.468.0",
+    "next": "^15.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.53.2",
+    "sonner": "^1.7.0",
+    "swiper": "^11.1.14",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8",
+    "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "eslint": "^9.14.0",
+    "eslint-config-next": "^15.0.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "autoprefixer": "^10.4.20"
+  },
+  "validate": "npm run typecheck && next build"
+}

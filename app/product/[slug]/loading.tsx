@@ -1,0 +1,3 @@
+import { Container } from "@/components/shared/container";
+import { LoadingSkeleton } from "@/components/shared/loading-skeleton";
+export default function ProductLoading() { return <section className="py-10 md:py-14"><Container><div className="grid gap-8 lg:grid-cols-[1fr_0.88fr]"><LoadingSkeleton className="aspect-square rounded-[2rem]" /><div className="rounded-[2rem] border border-border bg-card p-8 shadow-card"><LoadingSkeleton className="h-6 w-40" /><LoadingSkeleton className="mt-5 h-16 w-full" /><LoadingSkeleton className="mt-4 h-5 w-56" /><LoadingSkeleton className="mt-8 h-12 w-52" /><LoadingSkeleton className="mt-8 h-14 w-full rounded-full" /></div></div></Container></section>; }

@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 44 42% 96%;
+  --foreground: 158 28% 10%;
+
+  --card: 44 48% 98%;
+  --card-foreground: 158 28% 10%;
+
+  --primary: 154 43% 19%;
+  --primary-foreground: 44 55% 97%;
+
+  --accent: 26 88% 56%;
+  --accent-foreground: 44 55% 98%;
+
+  --muted: 42 25% 91%;
+  --muted-foreground: 154 12% 38%;
+
+  --border: 42 22% 83%;
+  --input: 42 22% 83%;
+  --ring: 154 43% 19%;
+
+  --success: 145 48% 34%;
+  --warning: 39 92% 56%;
+  --danger: 0 70% 48%;
+  --price: 154 43% 16%;
+  --discount: 14 80% 49%;
+  --fresh: 145 52% 34%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+::selection {
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+.container-px {
+  @apply px-5 sm:px-6 lg:px-8;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.minimal-surface {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.70), rgba(255,255,255,0.34)),
+    hsl(var(--card));
+}
+
+.minimal-grid {
+  background-image:
+    linear-gradient(rgba(20, 43, 33, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 43, 33, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.soft-radial {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(238, 133, 58, 0.16), transparent 24rem),
+    radial-gradient(circle at 88% 18%, rgba(31, 91, 67, 0.12), transparent 26rem),
+    hsl(var(--background));
+}
+
+.hero-word {
+  letter-spacing: -0.075em;
+}
+
+.product-minimal {
+  box-shadow: 0 1px 0 rgba(20, 43, 33, 0.06);
+}
+
+.product-minimal:hover {
+  box-shadow: 0 24px 70px rgba(20, 43, 33, 0.10);
+}
+
+.tap-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Ultra-minimal visual layer */
+.ultra-hero {
+  min-height: calc(100svh - 100px);
+}
+
+.image-veil {
+  background:
+    linear-gradient(90deg, rgba(248, 243, 232, 0.96) 0%, rgba(248, 243, 232, 0.80) 34%, rgba(248, 243, 232, 0.14) 70%),
+    linear-gradient(0deg, rgba(20, 43, 33, 0.10), transparent 42%);
+}
+
+.clean-glass {
+  background: rgba(248, 243, 232, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.hairline {
+  box-shadow: inset 0 0 0 1px hsl(var(--border));
+}
+
+.big-type {
+  letter-spacing: -0.085em;
+}
+
+.action-card {
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.action-card:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .image-veil {
+    background:
+      linear-gradient(0deg, rgba(248, 243, 232, 0.98) 0%, rgba(248, 243, 232, 0.82) 52%, rgba(248, 243, 232, 0.10) 100%);
+  }
+}
